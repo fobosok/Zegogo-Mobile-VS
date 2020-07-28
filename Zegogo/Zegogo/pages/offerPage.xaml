@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:zegogo="clr-namespace:Zegogo"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.offerPage"
+              xmlns:resource="clr-namespace:Zegogo.Resources"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ListView x:Name="optionsLV" VerticalOptions="FillAndExpand" ItemsSource="{Binding options}" HasUnevenRows="True" BackgroundColor="White">
+            <ListView.Header>
+                <StackLayout>
+                    <AbsoluteLayout MinimumHeightRequest="300" HeightRequest="300">
+                        <CarouselView ItemsSource="{Binding photos}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" HorizontalScrollBarVisibility="Always">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Image Source="{Binding original}" Aspect="AspectFill" HeightRequest="300"></Image>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <Frame AbsoluteLayout.LayoutBounds=".08,.08,35,35" AbsoluteLayout.LayoutFlags="PositionProportional" BackgroundColor="#FFFFFF" CornerRadius="17.5" Padding="7">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ImageButton_Clicked" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <Image Source="arrow_left" WidthRequest="25" HeightRequest="25" Margin="0"></Image>
+                        </Frame>
+                        <Frame AbsoluteLayout.LayoutBounds=".92,.08,35,35" AbsoluteLayout.LayoutFlags="PositionProportional" BackgroundColor="{Binding starColor}" CornerRadius="17.5" Padding="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ImageButton_Clicked_1" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <Image  Source="{Binding Istar}" WidthRequest="25" HeightRequest="25" Margin="7"></Image>
+                        </Frame>
+                    </AbsoluteLayout>
+                    <StackLayout Padding="0" Margin="0" Orientation="Horizontal">
+                        <Label Padding="20,10,0,0" Margin="0" VerticalOptions="CenterAndExpand" FontFamily="Circe-ExtraBold.ttf#Circe-ExtraBold" Text="{Binding price_formated}" TextColor="#000000" HorizontalTextAlignment="Start">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="24" Android="24"/>
+                            </Label.FontSize>
+                        </Label>
+                        <Label Padding="0,0,10,0" Margin="0" VerticalOptions="EndAndExpand" FontFamily="Circe-Light.ttf#Circe-Light" Text="{Binding date}" TextColor="#696969" MinimumWidthRequest="200" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Padding="0" Margin="0" Spacing="7">
+                        <Label Padding="20,0,25,0" Margin="0" VerticalOptions="CenterAndExpand" FontFamily="Circe-Regular.ttf#Circe-Regular" Text="{Binding title}" TextColor="#000000" HorizontalTextAlignment="Start" LineBreakMode="WordWrap">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                            </Label.FontSize>
+                        </Label>
+                        <Label Padding="20,0,0,0" Margin="0" VerticalOptions="CenterAndExpand" FontFamily="Circe-Light.ttf#Circe-Light" Text="{Binding country_city}" TextColor="#696969" HorizontalTextAlignment="Start" LineBreakMode="WordWrap">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                            </Label.FontSize>
+                        </Label>
+                        <Label Padding="20,0,10,0" Margin="0" VerticalOptions="CenterAndExpand" FontFamily="Circe-Light.ttf#Circe-Light" Text="{Binding id_string}" TextColor="#696969"  HorizontalTextAlignment="Start" LineBreakMode="WordWrap">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid Padding="20,7,20,7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1.75*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" VerticalOptions="StartAndExpand" FontFamily="Circe-Regular.ttf#Circe-Regular" Text="{Binding name}" MaxLines="1" LineBreakMode="NoWrap"  TextColor="#696969">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                    </Label.FontSize>
+                                </Label>
+                                <Label Grid.Column="1" VerticalOptions="CenterAndExpand" FontFamily="Circe-Bold.ttf#Circe-Bold" Text="{Binding value_text_string}" TextColor="#696969" LineBreakMode="WordWrap">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                    </Label.FontSize>
+                                </Label>
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout>
+                    <Label x:Name="textOffer" Padding="15" FontFamily="Circe-Regular.ttf#Circe-Regular" Text="{Binding text}" LineBreakMode="WordWrap" TextColor="#000000">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                            </Label.FontSize>
+                        </Label>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="#F9F9F9" Padding="10">
+                            <Frame CornerRadius="5" HasShadow="False" MinimumHeightRequest="55" HeightRequest="55" MinimumWidthRequest="55" WidthRequest="55" Padding="0" IsClippedToBounds="True">
+                                <Image Source="{Binding user.avatar}" MinimumHeightRequest="55" HeightRequest="55" MinimumWidthRequest="55" WidthRequest="55" Aspect="AspectFill" ></Image>
+                            </Frame>
+                            <StackLayout Spacing="0">
+                                <Label x:Name="textOffer2" VerticalOptions="StartAndExpand" FontFamily="Circe-Bold.ttf#Circe-Bold" Text="{Binding user.contact_person}" LineBreakMode="NoWrap" TextColor="#000000">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                                    </Label.FontSize>
+                                </Label>
+                                <Label x:Name="textOffer4" VerticalOptions="StartAndExpand" FontFamily="Circe-ExtraBold.ttf#Circe-ExtraBold" Text="{x:Static resource:AppResources.online}" LineBreakMode="NoWrap" TextColor="{Binding colorLab}">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                    </Label.FontSize>
+                                </Label>
+                                <Label x:Name="textOffer3" VerticalOptions="StartAndExpand" FontFamily="Circe-Light.ttf#Circe-Light" Text="{Binding user.reg_period}" LineBreakMode="NoWrap" TextColor="#696969">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <Frame BackgroundColor="#ECECEC" HasShadow="False" Padding="12">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <Label Text="{x:Static resource:AppResources.another_adv}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#BE593D" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                </Label.FontSize>
+                            </Label>
+                        </Frame>
+                        <Frame BackgroundColor="#ECECEC" HasShadow="False" Padding="12">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <Label Text="{x:Static resource:AppResources.similar_adv}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#BE593D" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                </Label.FontSize>
+                            </Label>
+                        </Frame>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"></ColumnDefinition>
+                                <ColumnDefinition Width="7*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.Column="0" BackgroundColor="#BE593D" Margin="15" Padding="5" CornerRadius="5" HasShadow="False">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Image Source="tele" HorizontalOptions="StartAndExpand" HeightRequest="20" WidthRequest="20"></Image>
+                                    <Label Text="{x:Static resource:AppResources.contact}" TextColor="White" FontFamily="Circe-Regular.ttf#Circe-Regular" Padding="8,0,15,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                            </Frame>
+                            <Frame Grid.Column="1" BackgroundColor="White" Margin="0,15,15,15" Padding="0" CornerRadius="5" BorderColor="#D7D7D7" HasShadow="False">
+                                <StackLayout Orientation="Horizontal" Spacing="0" Padding="3" Margin="0">
+                                    <zegogo:CustomEntry x:Name="mesEntry" Placeholder="{x:Static resource:AppResources.write_mess}" FontFamily="Circe-Regular.ttf#Circe-Regular" PlaceholderColor="#696969" Margin="0,-5,0,-5" HorizontalOptions="StartAndExpand">
+                                        <Entry.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Entry.FontSize>
+                                    </zegogo:CustomEntry>
+                                    <Frame BackgroundColor="#BE593D" HasShadow="False" Padding="0" CornerRadius="5" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                        </Frame.GestureRecognizers>
+                                        <Image Source="forward" HeightRequest="18" WidthRequest="18" Margin="4" BackgroundColor="#BE593D"></Image>
+                                    </Frame>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+            </ListView.Footer>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:zegogo="clr-namespace:Zegogo"
+             mc:Ignorable="d"
+             IconImageSource="tab2"
+             x:Class="Zegogo.pages.favorites"
+             xmlns:resource="clr-namespace:Zegogo.Resources"
+             BackgroundColor="#FFFFFF">
+    <ContentPage.Content>
+        <StackLayout Padding="0" Margin="0">
+            <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0">
+                <Frame.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="60" Android="50"></OnPlatform>
+                </Frame.HeightRequest>
+                <Label Text="{x:Static resource:AppResources.favorites}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.Padding>
+                        <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,0"></OnPlatform>
+                    </Label.Padding>
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                    </Label.FontSize>
+                </Label>
+            </Frame>
+            <AbsoluteLayout>
+                <StackLayout x:Name="emptyStackFav" AbsoluteLayout.LayoutBounds=".5,.3,.65,.3" AbsoluteLayout.LayoutFlags="All">
+                    <Image Source="fav_empty" WidthRequest="200"></Image>
+                    <Label FontFamily="Circe-Bold.ttf#Circe-Bold" Text="{x:Static resource:AppResources.no_Favorite_Ads}" TextColor="Black" HorizontalTextAlignment="Center" LineBreakMode="NoWrap">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="26" Android="26"/>
+                        </Label.FontSize>
+                    </Label>
+                    <Label FontFamily="Circe-Regular.ttf#Circe-Regular" Text="{x:Static resource:AppResources.you_can_add_to_favorites}" HorizontalTextAlignment="Center" MaxLines="3">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                        </Label.FontSize>
+                    </Label>
+                </StackLayout>
+                <ListView x:Name="advListView" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" ItemSelected="advListView_ItemSelected" HasUnevenRows="True"  SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Frame HeightRequest="126" Margin="20,6,20,6" Padding="0" HasShadow="False" BackgroundColor="#F8F8F8" CornerRadius="5">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                        </Frame.GestureRecognizers>
+                                        <StackLayout Orientation="Horizontal" Margin="0">
+                                            <Frame WidthRequest="126" HeightRequest="126" MinimumWidthRequest="126" CornerRadius="5" Padding="0" IsClippedToBounds="True" HasShadow="False">
+                                                <AbsoluteLayout>
+                                                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Source="{Binding photos[0].original}"  Aspect="AspectFill"></Image>
+                                                    <ImageButton AbsoluteLayout.LayoutBounds=".07,.07,25,25" AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="50" BackgroundColor="#BE593D" Source="starOn" Padding="5" Clicked="ImageButton_Clicked"></ImageButton>
+                                                </AbsoluteLayout>
+                                            </Frame>
+                                            <StackLayout Spacing="2" Padding="12">
+                                                <Label FontFamily="Circe-Regular.ttf#Circe-Regular" Text="{Binding title}" TextColor="#000000" HorizontalTextAlignment="Start" LineBreakMode="TailTruncation">
+                                                    <Label.FontSize>
+                                                        <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                                                    </Label.FontSize>
+                                                </Label>
+                                                <Label FontFamily="Circe-Light.ttf#Circe-Light" Text="{Binding text}" TextColor="#696969" LineBreakMode="TailTruncation" MaxLines="3" HorizontalTextAlignment="Start">
+                                                    <Label.FontSize>
+                                                        <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                                    </Label.FontSize>
+                                                </Label>
+                                                <StackLayout Padding="0,0,-6,0" Margin="0,0,-12,0" Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                                    <Label Padding="0,2,0,0" Margin="0" VerticalOptions="CenterAndExpand" FontFamily="Circe-Bold.ttf#Circe-Bold" Text="{Binding price_formated}" TextColor="#000000" LineBreakMode="TailTruncation" HorizontalTextAlignment="Start">
+                                                        <Label.FontSize>
+                                                            <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                                        </Label.FontSize>
+                                                    </Label>
+                                                    <StackLayout HorizontalOptions="EndAndExpand">
+                                                        <Image Source="top" IsVisible="{Binding isVisTop}" WidthRequest="40" HeightRequest="18" Margin="10" ></Image>
+                                                        <Image Source="vip" IsVisible="{Binding isVis}" WidthRequest="40" HeightRequest="18" Margin="10"></Image>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Label Text="{Binding id}" IsVisible="False" HeightRequest="0"></Label>
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Footer>
+                        <zegogo:stackShow Margin="0" Padding="0">
+                            <Button x:Name="loadButton" Text="{x:Static resource:AppResources.load_more}" HeightRequest="0" Margin="0" Clicked="loadButton_Clicked" BackgroundColor="Transparent" TextColor="#BE593D" FontFamily="Circe-Regular.ttf#Circe-Regular">
+                                <Button.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double" iOS="15" Android="15"/>
+                                </Button.FontSize>
+                            </Button>
+                            <ActivityIndicator x:Name="busyindicatorFoot" Margin="0" IsRunning="False" Color="#BE593D" HeightRequest="0" WidthRequest="30"></ActivityIndicator>
+                        </zegogo:stackShow>
+                    </ListView.Footer>
+                </ListView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>  

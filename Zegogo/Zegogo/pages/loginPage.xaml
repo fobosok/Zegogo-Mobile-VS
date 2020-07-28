@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d"
+            xmlns:resource="clr-namespace:Zegogo.Resources"
+             x:Class="Zegogo.pages.loginPage">
+    <ContentPage.Content>
+        <StackLayout Padding="0" Margin="0">
+            <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                <Label Text="{x:Static resource:AppResources.auth}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                    </Label.FontSize>
+                </Label>
+            </Frame>
+            <StackLayout Spacing="7">
+                <Image Source="logo_dark" Margin="35"></Image>
+                <Label Text="{x:Static resource:AppResources.sign_in}" FontFamily="Circe-ExtraBold.ttf#Circe-ExtraBold" TextColor="#8D8D8D" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="22" Android="22"/>
+                    </Label.FontSize>
+                </Label>
+                <inputLayout:SfTextInputLayout x:Name="userInput" Hint="{x:Static resource:AppResources.email}" ErrorText="{x:Static resource:AppResources.wrong_login_or_password}" ContainerType="Outlined" Margin="45,0,45,0" UnfocusedColor="#8D8D8D" FocusedColor="#BE593D">
+                    <Entry x:Name="username" Text=""/>
+                </inputLayout:SfTextInputLayout>
+                <inputLayout:SfTextInputLayout x:Name="passInput" Hint="{x:Static resource:AppResources.password}" ErrorText="{x:Static resource:AppResources.wrong_login_or_password}" ContainerType="Outlined" Margin="45,-8,45,0" UnfocusedColor="#8D8D8D" FocusedColor="#BE593D" EnablePasswordVisibilityToggle="True">
+                    <Entry x:Name="password" IsPassword="True" Text="" TextChanged="password_TextChanged"/>
+                </inputLayout:SfTextInputLayout>
+                <Button Text="{x:Static resource:AppResources.auth}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF"  CornerRadius="5" BackgroundColor="#BE593D" Margin="45,0,45,0" HeightRequest="53" Clicked="Button_Clicked_1">
+                    <Button.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                    </Button.FontSize>
+                </Button>
+                <Button Text="{x:Static resource:AppResources.registr}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#8D8D8D"  CornerRadius="5" BackgroundColor="#EAEAEA" Margin="45,5,45,0" HeightRequest="53" Clicked="Button_Clicked">
+                    <Button.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                    </Button.FontSize>
+                </Button>
+                <!--<Button Text="Не можете войти?" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#BE593D"  CornerRadius="5" BackgroundColor="Transparent" Margin="45,5,45,0" HeightRequest="53">
+                    <Button.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                    </Button.FontSize>
+                </Button>-->
+                <Frame  CornerRadius="5" BackgroundColor="Transparent" Margin="45,0,45,0" Padding="0">
+                    <Label Text="{x:Static resource:AppResources.terms_of_use}" HorizontalTextAlignment="Center" TextDecorations="Underline" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#BE593D" MaxLines="3">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                        </Label.FontSize>
+                    </Label>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

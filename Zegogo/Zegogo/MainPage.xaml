@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Zegogo.MainPage">
+    <ContentPage BackgroundColor="White">
+        <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3.4*"></RowDefinition>
+                    <RowDefinition Height="6.6*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" BackgroundColor="#D86241"></BoxView>
+                <BoxView Grid.Row="1"></BoxView>
+            </Grid>
+            <Image Source="elipse1" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,0,.7,.7"></Image>
+            <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,1,175,400" Spacing="5" Padding="0,25,0,0">
+                <Label FontFamily="Circe-ExtraBold.ttf#Circe-ExtraBold" Text="Находите" TextColor="#000000" HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="30"/>
+                    </Label.FontSize>
+                </Label>
+                <Label FontFamily="Circe-Light.ttf#Circe-Light" Text="все что вам нужно в объявлениях" TextColor="#000000" HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="22" Android="22"/>
+                    </Label.FontSize>
+                </Label>
+                <Image Source="transitions1" Margin="0,19,0,0"></Image>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage>
+    <ContentPage BackgroundColor="White">
+        <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3.4*"></RowDefinition>
+                    <RowDefinition Height="6.6*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" BackgroundColor="#D86241"></BoxView>
+                <BoxView Grid.Row="1"></BoxView>
+            </Grid>
+            <Image Source="elipse2" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,0,.7,.7"></Image>
+            <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,1,230   ,400" Spacing="5" Padding="0,25,0,0">
+                <Label FontFamily="Circe-ExtraBold.ttf#Circe-ExtraBold" Text="Покупайте" TextColor="#000000" HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="30"/>
+                    </Label.FontSize>
+                </Label>
+                <Label FontFamily="Circe-Light.ttf#Circe-Light" Text="любые товары и услуги из каталога объявлений" TextColor="#000000" HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="22" Android="22"/>
+                    </Label.FontSize>
+                </Label>
+                <Image Source="transitions2" Margin="0,19,0,0"></Image>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage>
+    <ContentPage BackgroundColor="White">
+        <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3.4*"></RowDefinition>
+                    <RowDefinition Height="6.6*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" BackgroundColor="#D86241"></BoxView>
+                <BoxView Grid.Row="1"></BoxView>
+            </Grid>
+            <Image Source="elipse3" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,0,.7,.7"></Image>
+            <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,1,250,400" Spacing="5" Padding="0,25,0,0">
+                <Label FontFamily="Circe-ExtraBold.ttf#Circe-ExtraBold" Text="Продавайте" TextColor="#000000" HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="30"/>
+                    </Label.FontSize>
+                </Label>
+                <Label FontFamily="Circe-Light.ttf#Circe-Light" Text="ваши товары или услуги разместив объявление" TextColor="#000000" HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="22" Android="22"/>
+                    </Label.FontSize>
+                </Label>
+                <Image Source="transitions3" Margin="0,19,0,0"></Image>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage>
+    <ContentPage BackgroundColor="White">
+        <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3.4*"></RowDefinition>
+                    <RowDefinition Height="6.6*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" BackgroundColor="#D86241"></BoxView>
+                <BoxView Grid.Row="1"></BoxView>
+            </Grid>
+            <Image Source="elipse4" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,0,.7,.7"></Image>
+            <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,1,250,400" Spacing="5" Padding="0,25,0,0">
+                <Label FontFamily="Circe-ExtraBold.ttf#Circe-ExtraBold" Text="Обменивайте" TextColor="#000000" HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="30"/>
+                    </Label.FontSize>
+                </Label>
+                <Label FontFamily="Circe-Light.ttf#Circe-Light" Text="ваши товары или услуги легко и быстро" TextColor="#000000" HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="22" Android="22"/>
+                    </Label.FontSize>
+                </Label>
+                <Image Source="transitions4" Margin="0,19,0,0"></Image>
+                <Button Text="Продолжить" CornerRadius="5" WidthRequest="285" HeightRequest="53" BackgroundColor="#BE593D" TextColor="#FFFFFF" VerticalOptions="Center" Margin="0,130,0,0" Clicked="Button_Clicked"></Button>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage>
+</CarouselPage>

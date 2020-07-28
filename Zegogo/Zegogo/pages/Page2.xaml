@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.Page2">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="10">
+            <Label Text="Другие объявления автора" TextColor="White" FontSize="Medium"></Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+ 
+        <ListView x:Name="advListView" ItemSelected="advListView_ItemSelected" HasUnevenRows="True"  SeparatorVisibility="None" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Frame HeightRequest="126" Margin="20,6,20,6" Padding="0" HasShadow="False" BackgroundColor="#F8F8F8" CornerRadius="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                <StackLayout Orientation="Horizontal" Margin="0">
+                                    <Frame WidthRequest="126" HeightRequest="126" MinimumWidthRequest="126" CornerRadius="5" Padding="0" IsClippedToBounds="True" HasShadow="False">
+                                        <AbsoluteLayout>
+                                            <Image AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Source="{Binding photos[0].original}"  Aspect="AspectFill"></Image>
+                                            <ImageButton x:Name="starImg" Clicked="starImg_Clicked" AbsoluteLayout.LayoutBounds=".07,.07,25,25" AbsoluteLayout.LayoutFlags="PositionProportional" Source="{Binding Istar}" CornerRadius="50" BackgroundColor="{Binding starColor}" Padding="5"></ImageButton>
+
+                                        </AbsoluteLayout>
+                                    </Frame>
+                                    <StackLayout Spacing="2" Padding="12" HorizontalOptions="FillAndExpand">
+                                        <Label FontFamily="Circe-Regular.ttf#Circe-Regular" Text="{Binding title}" TextColor="#000000" HorizontalTextAlignment="Start" LineBreakMode="TailTruncation">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                        <Label FontFamily="Circe-Light.ttf#Circe-Light" Text="{Binding text}" TextColor="#696969" LineBreakMode="TailTruncation" MaxLines="3" HorizontalTextAlignment="Start">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                        <StackLayout Padding="0,0,-6,0" Margin="0,0,-12,0" Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                                            <Label Padding="0,2,0,0" Margin="0" VerticalOptions="CenterAndExpand" FontFamily="Circe-Bold.ttf#Circe-Bold" Text="{Binding price_formated}" TextColor="#000000" LineBreakMode="TailTruncation" HorizontalTextAlignment="Start">
+                                                <Label.FontSize>
+                                                    <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                                </Label.FontSize>
+                                            </Label>
+                                            <StackLayout HorizontalOptions="EndAndExpand">
+                                                <Image Source="top" IsVisible="{Binding isVisTop}" WidthRequest="40" HeightRequest="18" Margin="10" ></Image>
+                                                <Image Source="vip" IsVisible="{Binding isVis}" WidthRequest="40" HeightRequest="18" Margin="10"></Image>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <Label Text="{Binding id}" IsVisible="False" HeightRequest="0"></Label>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

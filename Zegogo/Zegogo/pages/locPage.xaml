@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.locPage"
+             BackgroundColor="WhiteSmoke"
+             xmlns:resource="clr-namespace:Zegogo.Resources"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ListView x:Name="listLoc">
+            <ListView.Header>
+                <StackLayout Spacing="0">
+                    <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                            <ImageButton Source="arrow_left_w" WidthRequest="45" HeightRequest="45" Padding="18" CornerRadius="50" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"></ImageButton>
+                            <Label x:Name="loc" Text="{x:Static resource:AppResources.location}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" Margin="-45,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                                </Label.FontSize>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <inputLayout:SfTextInputLayout Hint="{x:Static resource:AppResources.city_country}" Padding="10,0,10,-15" ContainerType="Outlined">
+                        <Entry TextChanged="Entry_TextChanged" />
+                    </inputLayout:SfTextInputLayout>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Frame HeightRequest="126" Margin="20,6,20,6" Padding="0" HasShadow="False" BackgroundColor="WhiteSmoke" CornerRadius="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                <StackLayout Padding="0" Margin="0">
+                                    <Label Text="{Binding text}" TextColor="Black" VerticalOptions="CenterAndExpand" Opacity="0.85"></Label>
+                                    <Label Text="{Binding city}" WidthRequest="0" HeightRequest="0" IsVisible="False"></Label>
+                                    <Label Text="{Binding country}" WidthRequest="0" HeightRequest="0" IsVisible="False"></Label>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

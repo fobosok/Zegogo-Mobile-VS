@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             IconImageSource="tab4"
+             BackgroundColor="White"
+             xmlns:resource="clr-namespace:Zegogo.Resources"
+             x:Class="Zegogo.pages.messages">
+    <ContentPage.Content>
+        <StackLayout Padding="0" Margin="0">
+            <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                <Label Text="{x:Static resource:AppResources.messages}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                    </Label.FontSize>
+                </Label>
+            </Frame>
+            <tabview:SfTabView  Margin="0" TabHeaderBackgroundColor="#F8F8F8" TabHeight="30" VisibleHeaderCount="3">
+                <tabview:SfTabView.SelectionIndicatorSettings>
+                    <tabview:SelectionIndicatorSettings
+                       AnimationDuration="0"
+                    Color="#BE593D" 
+                    Position="Fill"/>
+                </tabview:SfTabView.SelectionIndicatorSettings>
+                <tabview:SfTabItem Title="{x:Static resource:AppResources.received}" SelectionColor="White" TitleFontColor="#8D8D8D" TitleFontFamily="Circe-Regular.ttf#Circe-Regular" TitleFontSize="12">
+                    <tabview:SfTabItem.Content>
+                        <AbsoluteLayout>
+                            <StackLayout x:Name="stak1" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.4,-1,-1" WidthRequest="280">
+                                <Image Source="chat" WidthRequest="100"></Image>
+                                <StackLayout>
+                                    <Label Text="{x:Static resource:AppResources.messages}" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="Black" LineHeight="30" HorizontalOptions="CenterAndExpand">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="25" Android="25"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <Label FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black" Opacity=".8"  Text="{x:Static resource:AppResources.correspondence_on_your_ads}" MaxLines="3" HorizontalTextAlignment="Center">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                            <listview:SfListView x:Name="list1" AutoFitMode="Height" ItemSpacing="-1">
+                                <listview:SfListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <Frame HasShadow="False" BorderColor="#D7D7D7">
+                                                    <Frame.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                                    </Frame.GestureRecognizers>
+                                                    <StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Padding="0" Text="{Binding interlocutor_name}" FontFamily="Circe-Regular.ttf#Circe-Regular" LineHeight="30" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation" VerticalOptions="CenterAndExpand">
+                                                                <Label.FontSize>
+                                                                    <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                                                                </Label.FontSize>
+                                                            </Label>
+                                                            <Label Padding="0" Text="{Binding date}" VerticalOptions="CenterAndExpand" FontFamily="Circe-Regular.ttf#Circe-Regular" LineHeight="30" HorizontalOptions="EndAndExpand" TextColor="#8D8D8D" FontSize="Medium" LineBreakMode="TailTruncation">
+                                                                <Label.FontSize>
+                                                                    <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                                                </Label.FontSize>
+                                                            </Label>
+                                                        </StackLayout>
+                                                        <Label Text="{Binding last_message}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                                                            <Label.FontSize>
+                                                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                                            </Label.FontSize>
+                                                        </Label>
+                                                        <Label Text="{Binding offer_id}" IsVisible="False" HeightRequest="0">
+                                                            
+                                                        </Label>
+                                                        <Label Text="{Binding interlocutor_id}" IsVisible="False" HeightRequest="0">
+
+                                                        </Label>
+                                                        <Label Text="{Binding interlocutor_name}" IsVisible="False" HeightRequest="0">
+
+                                                        </Label>
+                                                    </StackLayout>
+                                                </Frame>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </listview:SfListView.ItemTemplate>
+                                </listview:SfListView>
+                        </AbsoluteLayout>
+                    </tabview:SfTabItem.Content>
+                </tabview:SfTabItem>
+                <tabview:SfTabItem Title="{x:Static resource:AppResources.sent}" SelectionColor="White" TitleFontColor="#8D8D8D" TitleFontFamily="Circe-Regular.ttf#Circe-Regular" TitleFontSize="12">
+                    <tabview:SfTabItem.Content>
+                        <AbsoluteLayout>
+                            <StackLayout x:Name="stak2" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.4,-1,-1" WidthRequest="280">
+                                <Image Source="chat" WidthRequest="100"></Image>
+                                <StackLayout>
+                                    <Label Text="{x:Static resource:AppResources.messages}" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="Black" LineHeight="30" HorizontalOptions="CenterAndExpand">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="25" Android="25"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <Label FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black" Opacity=".8"  Text="{x:Static resource:AppResources.correspondence_on_your_ads}" MaxLines="3" HorizontalTextAlignment="Center">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                            <listview:SfListView x:Name="list2" AutoFitMode="Height" ItemSpacing="-1">
+                                <listview:SfListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <Frame HasShadow="False" BorderColor="#D7D7D7">
+                                                    <Frame.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                                    </Frame.GestureRecognizers>
+                                                    <StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Padding="0" Text="{Binding interlocutor_name}" FontFamily="Circe-Regular.ttf#Circe-Regular" LineHeight="30" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation" VerticalOptions="CenterAndExpand">
+                                                                <Label.FontSize>
+                                                                    <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                                                                </Label.FontSize>
+                                                            </Label>
+                                                            <Label Padding="0" Text="{Binding date}" VerticalOptions="CenterAndExpand" FontFamily="Circe-Regular.ttf#Circe-Regular" LineHeight="30" HorizontalOptions="EndAndExpand" TextColor="#8D8D8D" FontSize="Medium" LineBreakMode="TailTruncation">
+                                                                <Label.FontSize>
+                                                                    <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                                                </Label.FontSize>
+                                                            </Label>
+                                                        </StackLayout>
+                                                        <Label Text="{Binding last_message}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                                                            <Label.FontSize>
+                                                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                                            </Label.FontSize>
+                                                        </Label>
+                                                        <Label Text="{Binding offer_id}" IsVisible="False" HeightRequest="0">
+
+                                                        </Label>
+                                                        <Label Text="{Binding interlocutor_id}" IsVisible="False" HeightRequest="0">
+
+                                                        </Label>
+                                                        <Label Text="{Binding interlocutor_name}" IsVisible="False" HeightRequest="0">
+
+                                                        </Label>
+                                                    </StackLayout>
+                                                </Frame>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </listview:SfListView.ItemTemplate>
+                            </listview:SfListView>
+                        </AbsoluteLayout>
+                    </tabview:SfTabItem.Content>
+                </tabview:SfTabItem>
+                <tabview:SfTabItem Title="{x:Static resource:AppResources.arch}" SelectionColor="White" TitleFontColor="#8D8D8D" TitleFontFamily="Circe-Regular.ttf#Circe-Regular" TitleFontSize="12">
+                    <tabview:SfTabItem.Content>
+                        <AbsoluteLayout>
+                            <StackLayout x:Name="stak3" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.4,-1,-1" WidthRequest="280">
+                                <Image Source="chat" WidthRequest="100"></Image>
+                                <StackLayout>
+                                    <Label Text="{x:Static resource:AppResources.messages}" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="Black" LineHeight="30" HorizontalOptions="CenterAndExpand">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="25" Android="25"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <Label FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black" Opacity=".8"  Text="{x:Static resource:AppResources.correspondence_on_your_ads}" MaxLines="3" HorizontalTextAlignment="Center">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                            <listview:SfListView x:Name="list3" AutoFitMode="Height" ItemSpacing="-1">
+                                <listview:SfListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <Frame HasShadow="False" BorderColor="#D7D7D7">
+                                                    <Frame.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                                    </Frame.GestureRecognizers>
+                                                    <StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Padding="0" Text="{Binding interlocutor_name}" FontFamily="Circe-Regular.ttf#Circe-Regular" LineHeight="30" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation" VerticalOptions="CenterAndExpand">
+                                                                <Label.FontSize>
+                                                                    <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                                                                </Label.FontSize>
+                                                            </Label>
+                                                            <Label Padding="0" Text="{Binding date}" VerticalOptions="CenterAndExpand" FontFamily="Circe-Regular.ttf#Circe-Regular" LineHeight="30" HorizontalOptions="EndAndExpand" TextColor="#8D8D8D" FontSize="Medium" LineBreakMode="TailTruncation">
+                                                                <Label.FontSize>
+                                                                    <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                                                </Label.FontSize>
+                                                            </Label>
+                                                        </StackLayout>
+                                                        <Label Text="{Binding last_message}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                                                            <Label.FontSize>
+                                                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                                            </Label.FontSize>
+                                                        </Label>
+                                                        <Label Text="{Binding offer_id}" IsVisible="False" HeightRequest="0">
+
+                                                        </Label>
+                                                        <Label Text="{Binding interlocutor_id}" IsVisible="False" HeightRequest="0">
+
+                                                        </Label>
+                                                        <Label Text="{Binding interlocutor_name}" IsVisible="False" HeightRequest="0">
+
+                                                        </Label>
+                                                    </StackLayout>
+                                                </Frame>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </listview:SfListView.ItemTemplate>
+                            </listview:SfListView>
+                        </AbsoluteLayout>
+                    </tabview:SfTabItem.Content>
+                </tabview:SfTabItem>
+            </tabview:SfTabView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

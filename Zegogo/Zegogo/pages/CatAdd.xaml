@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.CatAdd"
+             xmlns:resource="clr-namespace:Zegogo.Resources"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <ImageButton Source="arrow_left_w" WidthRequest="45" HeightRequest="45" Padding="18" CornerRadius="50" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"></ImageButton>
+                    <Label Text="{x:Static resource:AppResources.choose_cat}"  FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" Margin="-45,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                        </Label.FontSize>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <ListView x:Name="CategoryListView" SeparatorColor="#D7D7D7">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Frame Grid.Row="0" Padding="0" Margin="0" HasShadow="False" BackgroundColor="#FFFFFF" CornerRadius="5">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                        <Image Source="{Binding icon_app}" HeightRequest="19" WidthRequest="19" Margin="20,0,5,0"></Image>
+                                        <Label Text="{Binding name}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                        <Image Source="arrow_right" IsVisible="{Binding isVisible}" WidthRequest="6" HeightRequest="10" HorizontalOptions="EndAndExpand" Margin="0,0,20,0"></Image>
+                                        <Label Text="{Binding id}" IsVisible="False"></Label>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

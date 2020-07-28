@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.PromotePage"
+             BackgroundColor="White"
+             xmlns:resource="clr-namespace:Zegogo.Resources"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="25">
+                <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                    <StackLayout Orientation="Horizontal" Spacing="0">
+                        <ImageButton Source="arrow_left_w" WidthRequest="45" HeightRequest="45" Padding="18" CornerRadius="50" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"></ImageButton>
+                        <Label Text="{x:Static resource:AppResources.to_advertise}"  FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" Margin="-45,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+                <Label Text="{x:Static resource:AppResources.Tariffs_of_available_paid_packages}" TextColor="Black" FontFamily="Circe-Bold.ttf#Circe-Bold" LineHeight="20" LineBreakMode="WordWrap" MaxLines="2" Padding="25,0,25,0">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                    </Label.FontSize>
+                </Label>
+                <Label Text="{x:Static resource:AppResources.You_can_promote}" TextColor="Black" FontFamily="Circe-Light.ttf#Circe-Light" Padding="25,0,25,0">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                    </Label.FontSize>
+                </Label>
+                <StackLayout Margin="25,0,25,0" Spacing="15">
+                    <Frame x:Name="prFrame1" Padding="0" BackgroundColor="LightGray" CornerRadius="7" HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Frame Margin="1" BackgroundColor="White" CornerRadius="5" HasShadow="False">
+                            <StackLayout Spacing="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{x:Static resource:AppResources.STANDARD}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                        <Label Text="1.99" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="#BE593D">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                        <Label Text="EUR" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#BE593D" VerticalOptions="Center">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom1" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.Top_3_days_ad}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom2" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.days_standard_ad_30}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                    <Frame x:Name="prFrame2" Padding="0" BackgroundColor="LightGray" CornerRadius="7" HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Frame Margin="1" BackgroundColor="White" CornerRadius="5" HasShadow="False">
+                            <StackLayout Spacing="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{x:Static resource:AppResources.BUSINESS}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                        <Label Text="7.99" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="#BE593D">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                        <Label Text="EUR" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#BE593D" VerticalOptions="Center">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom1" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.Top_7_days_ad}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom2" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.days_standard_ad_30}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom3" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.ups_5}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                    <Frame x:Name="prFrame3" Padding="0" BackgroundColor="LightGray" CornerRadius="7" HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Frame Margin="1" BackgroundColor="White" CornerRadius="5" HasShadow="False">
+                            <StackLayout Spacing="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{x:Static resource:AppResources.PREMIUM}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                        <Label Text="59.99" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="#BE593D">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                        <Label Text="EUR" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#BE593D" VerticalOptions="Center">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom1" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.Top_30_days_ad}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom2" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.days_standard_ad_30}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom3" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.ups_9}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="prom4" WidthRequest="11" HeightRequest="13"></Image>
+                                    <Label Text="{x:Static resource:AppResources.days_VIP_ad_7}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+                <Label Text="{x:Static resource:AppResources.In_addition_to_packages}" TextColor="Black" FontFamily="Circe-Bold.ttf#Circe-Bold" LineHeight="20" LineBreakMode="WordWrap" MaxLines="2" Padding="25,0,25,0">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                    </Label.FontSize>
+                </Label>
+                <Label Text="{x:Static resource:AppResources.You_can_also_choose}" TextColor="Black" FontFamily="Circe-Light.ttf#Circe-Light" Padding="25,0,25,0">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                    </Label.FontSize>
+                </Label>
+                <StackLayout Margin="25,0,25,0" Spacing="15">
+                    <Frame x:Name="prFrame4" Padding="0" BackgroundColor="LightGray" CornerRadius="7" HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Frame Margin="1" BackgroundColor="White" CornerRadius="5" HasShadow="False">
+                            <StackLayout Spacing="10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                        <Image Source="prom1" WidthRequest="28" HeightRequest="28"></Image>
+                                        <Label Text="{x:Static resource:AppResources.Placement_in_the_top_for_7_days}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black" >
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                    </StackLayout>
+                                    <Label Grid.Column="1" Text="5.99 EUR" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="#BE593D" VerticalOptions="Start">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="17" Android="17"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </Grid>
+                                <Label Text="{x:Static resource:AppResources.Your_ad_is_placed_in_a_separate_TOP_list_by_category_}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                    <Frame x:Name="prFrame5" Padding="0" BackgroundColor="LightGray" CornerRadius="7" HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Frame Margin="1" BackgroundColor="White" CornerRadius="5" HasShadow="False">
+                            <StackLayout Spacing="10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                        <Image Source="prom3" WidthRequest="28" HeightRequest="28"></Image>
+                                        <Label Text="{x:Static resource:AppResources.days_lift_7}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                    </StackLayout>
+                                    <Label Grid.Column="1" Text="3.99 EUR" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="#BE593D">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="17" Android="17"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </Grid>
+                                <Label Text="{x:Static resource:AppResources.Using_the_7_day_Rise_service}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                    <Frame x:Name="prFrame6" Padding="0" BackgroundColor="LightGray" CornerRadius="7" HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Frame Margin="1" BackgroundColor="White" CornerRadius="5" HasShadow="False">
+                            <StackLayout Spacing="10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                        <Image Source="prom4" WidthRequest="28" HeightRequest="28"></Image>
+                                        <Label Text="{x:Static resource:AppResources.days_VIP_ad_7}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="Black">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                                            </Label.FontSize>
+                                        </Label>
+                                    </StackLayout>
+                                    <Label Grid.Column="1" Text="19.99 EUR" FontFamily="Circe-Bold.ttf#Circe-Bold" TextColor="#BE593D">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double" iOS="17" Android="17"/>
+                                        </Label.FontSize>
+                                    </Label>
+                                </Grid>
+                                <Label Text="{x:Static resource:AppResources.Want_to_place_an_ad_in_the_most_viewed}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="Black">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="14"/>
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="25,0,25,10" Spacing="15">
+                    <Button x:Name="payBut" Text="{x:Static resource:AppResources.To_pay}" BackgroundColor="#BE593D" CornerRadius="10" TextColor="White" HorizontalOptions="CenterAndExpand" Padding="20" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

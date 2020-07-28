@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:checkbox="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.Registration"
+             xmlns:resource="clr-namespace:Zegogo.Resources"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="0" Margin="0">
+            <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <ImageButton Source="arrow_left_w" WidthRequest="45" HeightRequest="45" Padding="18" CornerRadius="50" BackgroundColor="Transparent" Clicked="TapGestureRecognizer_Tapped"></ImageButton>
+                    <Label Text="{x:Static resource:AppResources.registr}"  FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" Margin="-45,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                        </Label.FontSize>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <StackLayout Spacing="7">
+                <Image Source="logo_dark" Margin="35"></Image>
+                <Label Text="{x:Static resource:AppResources.registr}" FontFamily="Circe-ExtraBold.ttf#Circe-ExtraBold" TextColor="#8D8D8D" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="22" Android="22"/>
+                    </Label.FontSize>
+                </Label>
+                <inputLayout:SfTextInputLayout Hint="{x:Static resource:AppResources.email}" ContainerType="Outlined" Margin="45,0,45,0" UnfocusedColor="#8D8D8D" FocusedColor="#BE593D">
+                    <Entry x:Name="reg1" />
+                </inputLayout:SfTextInputLayout>
+                <inputLayout:SfTextInputLayout Hint="{x:Static resource:AppResources.password}" ContainerType="Outlined" Margin="45,-15,45,0" UnfocusedColor="#8D8D8D" FocusedColor="#BE593D" EnablePasswordVisibilityToggle="True">
+                    <Entry x:Name="reg2" IsPassword="True" />
+                </inputLayout:SfTextInputLayout>
+                <inputLayout:SfTextInputLayout Hint="{x:Static resource:AppResources.repeat_pass}" ContainerType="Outlined" Margin="45,-15,45,0" UnfocusedColor="#8D8D8D" FocusedColor="#BE593D" EnablePasswordVisibilityToggle="True">
+                    <Entry x:Name="reg3" IsPassword="True" />
+                </inputLayout:SfTextInputLayout>
+                <StackLayout Margin="45,0,45,0" Orientation="Horizontal">
+                    <checkbox:SfCheckBox x:Name="checkBox" VerticalOptions="Start"/>
+                    <Label LineBreakMode="WordWrap" FontFamily="Circe-Regular.ttf#Circe-Regular">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="10" Android="10"/>
+                        </Label.FontSize>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resource:AppResources.I_agree_with}" TextColor="#8D8D8D"/>
+                                <Span Text="{x:Static resource:AppResources.terms_of_use_space}" TextColor="#BE593D">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                                <Span Text="{x:Static resource:AppResources.service__as}" TextColor="#8D8D8D" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <Button Text="{x:Static resource:AppResources.registr}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF"  CornerRadius="5" BackgroundColor="#BE593D" Margin="45,10,45,0" HeightRequest="53" Clicked="Button_Clicked">
+                    <Button.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                    </Button.FontSize>
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

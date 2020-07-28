@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:chat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.Page4">
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                    <Color x:Key="SfChatIncomingMessageTextColor">White</Color>
+                    <Color x:Key="SfChatIncomingMessageTimestampTextColor">#C7D0CC</Color>
+                    <Color x:Key="SfChatIncomingMessageAuthorTextColor">DarkGray</Color>
+                    <Color x:Key="SfChatIncomingMessageBackgroundColor">#A5A5A5</Color>
+                    <x:String x:Key="SfChatIncomingMessageFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatIncomingMessageFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatIncomingMessageFontSize">16</x:Double>
+                    <x:String x:Key="SfChatIncomingMessageAuthorFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatIncomingMessageAuthorFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatIncomingMessageAuthorFontSize">16</x:Double>
+                    <x:String x:Key="SfChatIncomingMessageTimestampFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatIncomingMessageTimestampFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatIncomingMessageTimestampFontSize">16</x:Double>
+
+                    <Color x:Key="SyncPrimaryForegroundColor">White</Color>
+                    <Color x:Key="SyncPrimaryColor">#D86241</Color>
+                    <Color x:Key="SfChatOutgoingMessageTimestampTextColor">#C7D0CC</Color>
+                    <Color x:Key="SfChatOutgoingMessageAuthorTextColor">Gray</Color>
+                    <x:String x:Key="SfChatOutgoingMessageFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatOutgoingMessageFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatOutgoingMessageFontSize">16</x:Double>
+                    <x:String x:Key="SfChatOutgoingingMessageAuthorFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatOutgoingMessageAuthorFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatOutgoingMessageAuthorFontSize">16</x:Double>
+                    <x:String x:Key="SfChatOutgoingMessageTimestampFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatOutgoingMessageTimestampFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatOutgoingMessageTimestampFontSize">16</x:Double>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0" Spacing="0">
+            <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                <Label x:Name="labelH" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                    </Label.FontSize>
+                </Label>
+            </Frame>
+            <chat:SfChat SendMessage="sfChat_SendMessage"
+            x:Name="sfChat"
+            
+            ShowAttachmentButton="True"
+            MessageShape="DualTearDrop"
+              >
+            </chat:SfChat>
+        </StackLayout>
+        
+
+    </ContentPage.Content>
+</ContentPage>

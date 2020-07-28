@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.myOffers"
+             BackgroundColor="White"
+             xmlns:resource="clr-namespace:Zegogo.Resources" 
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <ImageButton Source="arrow_left_w" WidthRequest="45" HeightRequest="45" Padding="18" CornerRadius="50" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"></ImageButton>
+                    <Label Text="{x:Static resource:AppResources.my_announcements}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" Margin="-45,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                        </Label.FontSize>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <ListView x:Name="myOffersList" HeightRequest="0" HasUnevenRows="True" SeparatorVisibility="Default" ItemSelected="myOffersList_ItemSelected_1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Frame HeightRequest="250" Margin="6,16,5,16" Padding="5,5,5,5" HasShadow="False" BackgroundColor="#F8F8F8" CornerRadius="5">
+                                    <StackLayout Spacing="15">
+                                        <StackLayout Orientation="Horizontal" Margin="0">
+                                            <Frame WidthRequest="126" HeightRequest="126" MinimumWidthRequest="126" CornerRadius="5" Padding="0" IsClippedToBounds="True" HasShadow="False">
+                                                <Image Source="{Binding photos[0].original}"  Aspect="AspectFill"></Image>
+                                            </Frame>
+                                            <StackLayout Spacing="2" Padding="12">
+                                                <Label FontFamily="Circe-Regular.ttf#Circe-Regular" Text="{Binding title}" TextColor="#000000" HorizontalTextAlignment="Start" LineBreakMode="TailTruncation">
+                                                    <Label.FontSize>
+                                                        <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                                                    </Label.FontSize>
+                                                </Label>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="7*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="7*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0" Text="{x:Static resource:AppResources.from}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="#696969" MaxLines="1">
+                                                        <Label.FontSize>
+                                                            <OnPlatform x:TypeArguments="x:Double" iOS="10" Android="10"/>
+                                                        </Label.FontSize>
+                                                    </Label>
+                                                    <Label Grid.Column="1" FontFamily="Circe-Light.ttf#Circe-Light" Text="{Binding date}" TextColor="#696969" LineBreakMode="TailTruncation" MaxLines="1" HorizontalTextAlignment="Start">
+                                                        <Label.FontSize>
+                                                            <OnPlatform x:TypeArguments="x:Double" iOS="10" Android="10"/>
+                                                        </Label.FontSize>
+                                                    </Label>
+                                                    <Label Grid.Column="2" Text="{x:Static resource:AppResources.before}" FontFamily="Circe-Light.ttf#Circe-Light" TextColor="#696969" MaxLines="1">
+                                                        <Label.FontSize>
+                                                            <OnPlatform x:TypeArguments="x:Double" iOS="10" Android="10"/>
+                                                        </Label.FontSize>
+                                                    </Label>
+                                                    <Label Grid.Column="3" FontFamily="Circe-Light.ttf#Circe-Light" Text="{Binding active_to}" TextColor="#696969" LineBreakMode="TailTruncation" MaxLines="1" HorizontalTextAlignment="Start">
+                                                        <Label.FontSize>
+                                                            <OnPlatform x:TypeArguments="x:Double" iOS="10" Android="10"/>
+                                                        </Label.FontSize>
+                                                    </Label>
+                                                </Grid>
+                                                <Label Text="{x:Static resource:AppResources.active}" TextColor="Green"></Label>
+                                                <StackLayout Padding="0,0,-6,0" Margin="0,0,-12,0" Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="8*">
+
+                                                            </ColumnDefinition>
+                                                            <ColumnDefinition Width="1*">
+
+                                                            </ColumnDefinition>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Column="0" Padding="0,2,0,0" Margin="0" VerticalOptions="CenterAndExpand" FontFamily="Circe-Bold.ttf#Circe-Bold" Text="{Binding price_formated}" TextColor="#000000" LineBreakMode="TailTruncation" HorizontalTextAlignment="Start">
+                                                            <Label.FontSize>
+                                                                <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="20"/>
+                                                            </Label.FontSize>
+                                                        </Label>
+                                                    </Grid>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <Label Text="{Binding id}" IsVisible="False" HeightRequest="0"></Label>
+                                        </StackLayout>
+                                        <Grid Padding="25,5,5,5">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                                <ColumnDefinition Width="1.4*"></ColumnDefinition>
+                                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Grid.Column="0">
+                                                <Label Text="{x:Static resource:AppResources.views}"></Label>
+                                                <Label Text="{Binding views}"></Label>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="1">
+                                                <Label Text="{x:Static resource:AppResources.phone}" MaxLines="1" LineBreakMode="TailTruncation"></Label>
+                                                <Label Text="{Binding phone_views}"></Label>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="2">
+                                                <Label Text="{x:Static resource:AppResources.in_fav}"></Label>
+                                                <Label Text="{Binding favorites_count}"></Label>
+                                            </StackLayout>
+                                        </Grid>
+                                        <Grid Grid.ColumnSpan="15">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                                <ColumnDefinition Width="6*"></ColumnDefinition>
+                                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Button Grid.Column="0" Text="{x:Static resource:AppResources.raise}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF"  CornerRadius="5" BackgroundColor="#BE593D" Margin="5,5,5,5" VerticalOptions="CenterAndExpand" HeightRequest="53" Clicked="Button_Clicked_1">
+
+                                            </Button>
+                                            <Button Grid.Column="1" Text="{x:Static resource:AppResources.to_advertise}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF"  CornerRadius="5" BackgroundColor="#D86241" Margin="5,5,5,5" VerticalOptions="CenterAndExpand" HeightRequest="53" Clicked="Button_Clicked_2">
+
+                                            </Button>
+                                            <Button Grid.Column="2" Text="⋮" TextColor="#BE593D" FontAttributes="Bold" Clicked="Button_Clicked" Padding="0">
+                                                <Button.FontSize>
+                                                    <OnPlatform x:TypeArguments="x:Double" iOS="25" Android="25"/>
+                                                </Button.FontSize>
+                                            </Button>
+                                        </Grid>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="active" xml:space="preserve">
+    <value>Aktyvus</value>
+  </data>
+  <data name="add photo" xml:space="preserve">
+    <value>Pridėti nuotrauką</value>
+  </data>
+  <data name="all cat" xml:space="preserve">
+    <value>Visos kategorijos</value>
+  </data>
+  <data name="all in cat" xml:space="preserve">
+    <value>Visi kategorijoje:</value>
+  </data>
+  <data name="another adv" xml:space="preserve">
+    <value>KITI AUTORIO PRANEŠIMAI</value>
+  </data>
+  <data name="app lang" xml:space="preserve">
+    <value>Programos kalba</value>
+  </data>
+  <data name="arch" xml:space="preserve">
+    <value>Archyvas</value>
+  </data>
+  <data name="are u sure" xml:space="preserve">
+    <value>Ar tu tuo tikras?</value>
+  </data>
+  <data name="auth" xml:space="preserve">
+    <value>Prisijungti</value>
+  </data>
+  <data name="before" xml:space="preserve">
+    <value>Prieš:</value>
+  </data>
+  <data name="BUSINESS" xml:space="preserve">
+    <value>BUSINESS</value>
+  </data>
+  <data name="call" xml:space="preserve">
+    <value>Paskambinti</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Atšaukti</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Pakeisti slaptažodį</value>
+  </data>
+  <data name="choose" xml:space="preserve">
+    <value>Pasirinkite</value>
+  </data>
+  <data name="choose cat" xml:space="preserve">
+    <value>Pasirinkite kategoriją</value>
+  </data>
+  <data name="city country" xml:space="preserve">
+    <value>Miestas Šalis</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Kontaktas</value>
+  </data>
+  <data name="correspondence on your ads" xml:space="preserve">
+    <value>Čia bus rodoma jūsų skelbimų korespondencija ir kitų vartotojų atsakymai.</value>
+  </data>
+  <data name="days lift 7" xml:space="preserve">
+    <value>7 days lift</value>
+  </data>
+  <data name="days standard ad 30" xml:space="preserve">
+    <value>30 days standard ad</value>
+  </data>
+  <data name="days VIP ad 7" xml:space="preserve">
+    <value>7 days VIP ad</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Ištrinti</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Apibūdinimas</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Redaguoti</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Paštas</value>
+  </data>
+  <data name="exchange" xml:space="preserve">
+    <value>Vaihto</value>
+  </data>
+  <data name="favorites" xml:space="preserve">
+    <value>Teminiai</value>
+  </data>
+  <data name="filters" xml:space="preserve">
+    <value>Filtrai</value>
+  </data>
+  <data name="free" xml:space="preserve">
+    <value>Nemokamai</value>
+  </data>
+  <data name="from" xml:space="preserve">
+    <value>Iš:</value>
+  </data>
+  <data name="headline" xml:space="preserve">
+    <value>Antraštė</value>
+  </data>
+  <data name="I agree with" xml:space="preserve">
+    <value>Aš sutinku su</value>
+  </data>
+  <data name="In addition to packages" xml:space="preserve">
+    <value>IN ADDITION TO PACKAGES</value>
+  </data>
+  <data name="in fav" xml:space="preserve">
+    <value>Mėgstamiausiose:</value>
+  </data>
+  <data name="load more" xml:space="preserve">
+    <value>Įkelti daugiau ...</value>
+  </data>
+  <data name="location" xml:space="preserve">
+    <value>Vieta</value>
+  </data>
+  <data name="log out" xml:space="preserve">
+    <value>Atsijungti</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Prisijungti</value>
+  </data>
+  <data name="messages" xml:space="preserve">
+    <value>Žinutės</value>
+  </data>
+  <data name="my announcements" xml:space="preserve">
+    <value>Mani paziņojumi</value>
+  </data>
+  <data name="my profile" xml:space="preserve">
+    <value>Mano profilis</value>
+  </data>
+  <data name="my settings" xml:space="preserve">
+    <value>Mano nustatymai</value>
+  </data>
+  <data name="negotiated" xml:space="preserve">
+    <value>Derėtasi</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="no Favorite Ads" xml:space="preserve">
+    <value>Nėra mėgstamų skelbimų</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Gerai</value>
+  </data>
+  <data name="online" xml:space="preserve">
+    <value>Prisijungęs</value>
+  </data>
+  <data name="options" xml:space="preserve">
+    <value>Galimybės</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Slaptažodis</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>Telefono numeris:</value>
+  </data>
+  <data name="phone number" xml:space="preserve">
+    <value>Telefono numeris</value>
+  </data>
+  <data name="Placement in the top for 7 days" xml:space="preserve">
+    <value>Placement in the top for 7 days</value>
+  </data>
+  <data name="post add" xml:space="preserve">
+    <value>Paskelbti skelbimą</value>
+  </data>
+  <data name="PREMIUM" xml:space="preserve">
+    <value>PREMIUM</value>
+  </data>
+  <data name="price" xml:space="preserve">
+    <value>Kaina</value>
+  </data>
+  <data name="publish" xml:space="preserve">
+    <value>Paskelbti</value>
+  </data>
+  <data name="raise" xml:space="preserve">
+    <value>Pakelkite už 0,9 €</value>
+  </data>
+  <data name="received" xml:space="preserve">
+    <value>Gauta</value>
+  </data>
+  <data name="registr" xml:space="preserve">
+    <value>įsiregistruoti</value>
+  </data>
+  <data name="repeat pass" xml:space="preserve">
+    <value>Patvirtinti slaptažodį</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Sutaupyti</value>
+  </data>
+  <data name="sent" xml:space="preserve">
+    <value>Išsiųsta</value>
+  </data>
+  <data name="service, as" xml:space="preserve">
+    <value>paslaugą, taip pat perduodant ir tvarkant mano asmeninius duomenis ZEGOGO. Patvirtinu savo amžių ir atsakomybę už skelbimų skelbimą</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Nustatymai</value>
+  </data>
+  <data name="sign in" xml:space="preserve">
+    <value>įėjimas</value>
+  </data>
+  <data name="similar adv" xml:space="preserve">
+    <value>Panašūs pranešimai</value>
+  </data>
+  <data name="STANDARD" xml:space="preserve">
+    <value>STANDARD</value>
+  </data>
+  <data name="Tariffs of available paid packages" xml:space="preserve">
+    <value>TARIFFS OF AVAILABLE PAID PACKAGES</value>
+  </data>
+  <data name="terms of use" xml:space="preserve">
+    <value>Naudojimo sąlygos / privatumo politika ir asmens duomenų tvarkymas</value>
+  </data>
+  <data name="terms of use space" xml:space="preserve">
+    <value>naudojimo sąlygos </value>
+  </data>
+  <data name="to advertise" xml:space="preserve">
+    <value>Mainostaa</value>
+  </data>
+  <data name="To pay" xml:space="preserve">
+    <value>To pay</value>
+  </data>
+  <data name="Top 3 days ad" xml:space="preserve">
+    <value>Top 3 days ad</value>
+  </data>
+  <data name="Top 30 days ad" xml:space="preserve">
+    <value>Top 30 days ad</value>
+  </data>
+  <data name="Top 7 days ad" xml:space="preserve">
+    <value>Top 7 days ad</value>
+  </data>
+  <data name="ups 5" xml:space="preserve">
+    <value>5 ups</value>
+  </data>
+  <data name="ups 9" xml:space="preserve">
+    <value>9 ups</value>
+  </data>
+  <data name="user did not provide" xml:space="preserve">
+    <value>Naudotojas nepateikė telefono numerio</value>
+  </data>
+  <data name="Using the 7 day Rise service" xml:space="preserve">
+    <value>By default, ads on ZEGOGO are displayed by the date they were posted. Using the «7-day Rise» service, your ad will again rise to the top positions in the list every 24 hours, as if you had placed it a moment ago!</value>
+  </data>
+  <data name="views" xml:space="preserve">
+    <value>Peržiūrų:</value>
+  </data>
+  <data name="Want to place an ad in the most viewed" xml:space="preserve">
+    <value>Want to place an ad in the most viewed position and get the most feedback? Then the «VIP announcement» is what you need. Your ad will be placed on the ZEGOGO homepage, where everyone will see it!</value>
+  </data>
+  <data name="write mess" xml:space="preserve">
+    <value>Norėdami parašyti žinutę ...</value>
+  </data>
+  <data name="write sms" xml:space="preserve">
+    <value>Rašyti SMS</value>
+  </data>
+  <data name="wrong login or password" xml:space="preserve">
+    <value>Neteisingas prisijungimo vardas arba slaptažodis</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Taip</value>
+  </data>
+  <data name="you can add to favorites" xml:space="preserve">
+    <value>Galite pridėti prie mėgstamiausių pranešimų puslapyje arba skelbimų sąrašo puslapyje</value>
+  </data>
+  <data name="You can also choose" xml:space="preserve">
+    <value>You can also choose additional services for packages to promote your ad and receive feedback</value>
+  </data>
+  <data name="You can promote" xml:space="preserve">
+    <value>The Zegogo.com team has prepared several affordable paid packages to promote your ads. You can promote your services and products in the category you need, as well as increase the conversion of requests using packages such as: Standard, Business, Premium!
+Best regards, Zegogo.com team - New level advertising service!</value>
+  </data>
+  <data name="Your ad is placed in a separate TOP list by category." xml:space="preserve">
+    <value>Your ad is placed in a separate TOP list by category. A great option if you have exactly decided on the category of your ad and you do not need to place a VIP ad.</value>
+  </data>
+</root>

@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="active" xml:space="preserve">
+    <value>Активно</value>
+  </data>
+  <data name="add photo" xml:space="preserve">
+    <value>Добавить фото</value>
+  </data>
+  <data name="all cat" xml:space="preserve">
+    <value>Все категории</value>
+  </data>
+  <data name="all in cat" xml:space="preserve">
+    <value>Все в категории:</value>
+  </data>
+  <data name="another adv" xml:space="preserve">
+    <value>ДРУГИЕ ОБЪЯВЛЕНИЯ АВТОРА</value>
+  </data>
+  <data name="app lang" xml:space="preserve">
+    <value>Язык приложения</value>
+  </data>
+  <data name="arch" xml:space="preserve">
+    <value>Архивные</value>
+  </data>
+  <data name="are u sure" xml:space="preserve">
+    <value>Вы уверенны?</value>
+  </data>
+  <data name="auth" xml:space="preserve">
+    <value>Авторизация</value>
+  </data>
+  <data name="before" xml:space="preserve">
+    <value>До:</value>
+  </data>
+  <data name="BUSINESS" xml:space="preserve">
+    <value>БИЗНЕС</value>
+  </data>
+  <data name="call" xml:space="preserve">
+    <value>Позвонить</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Изменить пароль</value>
+  </data>
+  <data name="choose" xml:space="preserve">
+    <value>Выберите</value>
+  </data>
+  <data name="choose cat" xml:space="preserve">
+    <value>Выбрать категорию</value>
+  </data>
+  <data name="city country" xml:space="preserve">
+    <value>Город, страна</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="correspondence on your ads" xml:space="preserve">
+    <value>Переписка по вашим объявлениям и ответы других пользователей будут отображаться здесь.</value>
+  </data>
+  <data name="days lift 7" xml:space="preserve">
+    <value>ПОДНЯТИЕ НА 7 ДНЕЙ</value>
+  </data>
+  <data name="days standard ad 30" xml:space="preserve">
+    <value>Стандартное объявление на 30 дней</value>
+  </data>
+  <data name="days VIP ad 7" xml:space="preserve">
+    <value>VIP-объявление на 7 дней</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Почта</value>
+  </data>
+  <data name="exchange" xml:space="preserve">
+    <value>Обмен</value>
+  </data>
+  <data name="favorites" xml:space="preserve">
+    <value>Избранные</value>
+  </data>
+  <data name="filters" xml:space="preserve">
+    <value>Фильтры</value>
+  </data>
+  <data name="free" xml:space="preserve">
+    <value>Бесплатно</value>
+  </data>
+  <data name="from" xml:space="preserve">
+    <value>От:</value>
+  </data>
+  <data name="headline" xml:space="preserve">
+    <value>Заголовок</value>
+  </data>
+  <data name="I agree with" xml:space="preserve">
+    <value>Я соглашаюсь с </value>
+  </data>
+  <data name="In addition to packages" xml:space="preserve">
+    <value>ДОПОЛНИТЕЛЬНО К ПАКЕТАМ</value>
+  </data>
+  <data name="in fav" xml:space="preserve">
+    <value>В избранном:</value>
+  </data>
+  <data name="load more" xml:space="preserve">
+    <value>Загрузить ещё</value>
+  </data>
+  <data name="location" xml:space="preserve">
+    <value>Местоположение</value>
+  </data>
+  <data name="log out" xml:space="preserve">
+    <value>Выход из учетной записи</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="messages" xml:space="preserve">
+    <value>Сообщения</value>
+  </data>
+  <data name="my announcements" xml:space="preserve">
+    <value>Мои объявления</value>
+  </data>
+  <data name="my profile" xml:space="preserve">
+    <value>Мой профиль</value>
+  </data>
+  <data name="my settings" xml:space="preserve">
+    <value>Мои настройки</value>
+  </data>
+  <data name="negotiated" xml:space="preserve">
+    <value>Договорная</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="no Favorite Ads" xml:space="preserve">
+    <value>Нет избранных объявлений</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Ок</value>
+  </data>
+  <data name="online" xml:space="preserve">
+    <value>В сети</value>
+  </data>
+  <data name="options" xml:space="preserve">
+    <value>Опции</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>Номер телефона:</value>
+  </data>
+  <data name="phone number" xml:space="preserve">
+    <value>Номер телефона</value>
+  </data>
+  <data name="Placement in the top for 7 days" xml:space="preserve">
+    <value>РАЗМЕЩЕНИЕ В ТОП НА 7 ДНЕЙ</value>
+  </data>
+  <data name="post add" xml:space="preserve">
+    <value>Подать объявление</value>
+  </data>
+  <data name="PREMIUM" xml:space="preserve">
+    <value>ПРЕМИУМ</value>
+  </data>
+  <data name="price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="publish" xml:space="preserve">
+    <value>Опубликовать</value>
+  </data>
+  <data name="raise" xml:space="preserve">
+    <value>Поднять за 0.9 €</value>
+  </data>
+  <data name="received" xml:space="preserve">
+    <value>Полученные</value>
+  </data>
+  <data name="registr" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="repeat pass" xml:space="preserve">
+    <value>Повторите пароль</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="sent" xml:space="preserve">
+    <value>Отправленные</value>
+  </data>
+  <data name="service, as" xml:space="preserve">
+    <value>сервиса, а также, с передачей и обработкой моих персональных данных в ZEGOGO. Я подтерждаю свое совершеннолетие и ответственность за размещение объявления</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="sign in" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="similar adv" xml:space="preserve">
+    <value>ПОХОЖИЕ ОБЪЯВЛЕНИЯ</value>
+  </data>
+  <data name="STANDARD" xml:space="preserve">
+    <value>СТАНДАРТ</value>
+  </data>
+  <data name="Tariffs of available paid packages" xml:space="preserve">
+    <value>ТАРИФЫ ДОСТУПНЫХ ПЛАТНЫХ ПАКЕТОВ</value>
+  </data>
+  <data name="terms of use" xml:space="preserve">
+    <value>Условия пользования / политика конфидинциальности и обработка личных данных</value>
+  </data>
+  <data name="terms of use space" xml:space="preserve">
+    <value>правилами использования </value>
+  </data>
+  <data name="to advertise" xml:space="preserve">
+    <value>Рекламировать</value>
+  </data>
+  <data name="To pay" xml:space="preserve">
+    <value>Оплатить</value>
+  </data>
+  <data name="Top 3 days ad" xml:space="preserve">
+    <value>Топ-объявление на 3 дня</value>
+  </data>
+  <data name="Top 30 days ad" xml:space="preserve">
+    <value>Топ-объявление на 30 дней</value>
+  </data>
+  <data name="Top 7 days ad" xml:space="preserve">
+    <value>Топ-объявление на 7 дней</value>
+  </data>
+  <data name="ups 5" xml:space="preserve">
+    <value>5 поднятий в верх списка</value>
+  </data>
+  <data name="ups 9" xml:space="preserve">
+    <value>9 поднятий в верх списка</value>
+  </data>
+  <data name="user did not provide" xml:space="preserve">
+    <value>Пользователь не указал номер телефона</value>
+  </data>
+  <data name="Using the 7 day Rise service" xml:space="preserve">
+    <value>По умолчанию объявления на ZEGOGO отображаются по дате их размещения. С помощью услуги «Поднятие на 7 дней» ваше объявление снова поднимется на верхние позиции в списке каждые 24 часа, как если бы вы разместили его мгновение назад!</value>
+  </data>
+  <data name="views" xml:space="preserve">
+    <value>Просмотры:</value>
+  </data>
+  <data name="Want to place an ad in the most viewed" xml:space="preserve">
+    <value>Хотите разместить объявление на наиболее просматриваемой позиции и получить наибольшее количество откликов? Тогда «VIP-объявление» - это то что вам нужно. Ваше объявление будет размещено на главной странице ZEGOGO, где его увидят все!</value>
+  </data>
+  <data name="write mess" xml:space="preserve">
+    <value>Написать сообщение ...</value>
+  </data>
+  <data name="write sms" xml:space="preserve">
+    <value>Написать смс</value>
+  </data>
+  <data name="wrong login or password" xml:space="preserve">
+    <value>Неверный логин или пароль</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="you can add to favorites" xml:space="preserve">
+    <value>Добавить в избранное можно со страницы объявления либо со страницы списка объявлений</value>
+  </data>
+  <data name="You can also choose" xml:space="preserve">
+    <value>Вы также можете выбрать дополнительные услуги для пакетов, чтобы продвигать объявление и получать отзывы</value>
+  </data>
+  <data name="You can promote" xml:space="preserve">
+    <value>Команда Zegogo.com подготовила несколько доступных платных пакетов для продвижения ваших объявлений. Вы можете продвигать свои услуги и товары в нужной для вас категории, а так же увеличивать конверсию обращений с помощью таких пакетов как: Стандарт, Бизнес, Премиум!
+С уважением, команда Zegogo.com - Сервис объявлений нового уровня!</value>
+  </data>
+  <data name="Your ad is placed in a separate TOP list by category." xml:space="preserve">
+    <value>Ваше объявление размещается в отдельный ТОП список по категории. Отличный вариант если Вы точно определились с категорией вашего объявления и вам не требуется размещение VIP объявления.</value>
+  </data>
+</root>

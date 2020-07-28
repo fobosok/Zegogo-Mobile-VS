@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Zegogo.pages.langPage"
+             xmlns:resource="clr-namespace:Zegogo.Resources" 
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Frame HasShadow="False" BackgroundColor="#BE593D" Padding="0" Margin="0" CornerRadius="0" HeightRequest="50">
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <ImageButton Source="arrow_left_w" WidthRequest="45" HeightRequest="45" Padding="18" CornerRadius="50" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"></ImageButton>
+                    <Label Text="{x:Static resource:AppResources.app_lang}" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#FFFFFF" Margin="-45,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="18" Android="18"/>
+                        </Label.FontSize>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="55" Padding="0" Margin="0" HasShadow="False" BackgroundColor="#FFFFFF" CornerRadius="5">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="15,0,0,0" Spacing="15">
+                        <Image Source="ru.png" WidthRequest="25"></Image>
+                        <Label Text="Russian" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="#D7D7D7" VerticalOptions="End"></BoxView>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="55" Padding="0" Margin="0" HasShadow="False" BackgroundColor="#FFFFFF" CornerRadius="5">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="15,0,0,0" Spacing="15">
+                        <Image Source="en.png" WidthRequest="25"></Image>
+                        <Label Text="English" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="#D7D7D7" VerticalOptions="End"></BoxView>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="55" Padding="0" Margin="0" HasShadow="False" BackgroundColor="#FFFFFF" CornerRadius="5">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="15,0,0,0" Spacing="15">
+                        <Image Source="et.png" WidthRequest="25"></Image>
+                        <Label Text="Estonian" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="#D7D7D7" VerticalOptions="End"></BoxView>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="55" Padding="0" Margin="0" HasShadow="False" BackgroundColor="#FFFFFF" CornerRadius="5">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="15,0,0,0" Spacing="15">
+                        <Image Source="fi.png" WidthRequest="25"></Image>
+                        <Label Text="Finnish" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="#D7D7D7" VerticalOptions="End"></BoxView>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="55" Padding="0" Margin="0" HasShadow="False" BackgroundColor="#FFFFFF" CornerRadius="5">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="15,0,0,0" Spacing="15">
+                        <Image Source="lt.png" WidthRequest="25"></Image>
+                        <Label Text="Lithuanian" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="#D7D7D7" VerticalOptions="End"></BoxView>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="55" Padding="0" Margin="0" HasShadow="False" BackgroundColor="#FFFFFF" CornerRadius="5">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="15,0,0,0" Spacing="15">
+                        <Image Source="lv.png" WidthRequest="25"></Image>
+                        <Label Text="Latvian" FontFamily="Circe-Regular.ttf#Circe-Regular" TextColor="#000000">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="16" Android="16"/>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="#D7D7D7" VerticalOptions="End"></BoxView>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
