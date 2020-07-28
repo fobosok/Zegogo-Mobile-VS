@@ -107,7 +107,7 @@ namespace Zegogo.pages
 				tempTP.Children.Add(new messages());
 				tempTP.Children.Add(new profile());
 			}
-			catch (Exception exp)
+			catch
 			{
 				userInput.HasError = true;
 				passInput.HasError = true;
