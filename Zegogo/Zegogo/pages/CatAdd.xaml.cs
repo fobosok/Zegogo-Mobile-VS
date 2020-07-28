@@ -39,6 +39,8 @@ namespace Zegogo.pages
 			InitializeComponent();
 			CategoryListView.ItemsSource = null;
 			CategoryListView.ItemsSource = listCategory.categories;
+
+			//test add
 		}
 
 		private async void ImageButton_Clicked(object sender, EventArgs e)
