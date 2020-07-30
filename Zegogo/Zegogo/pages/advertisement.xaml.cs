@@ -47,10 +47,6 @@ namespace Zegogo.pages
 			getVip();
 			Subscribe();
 		}
-		protected override void OnAppearing()
-		{
-			base.OnAppearing();
-		}
 		public async void getVip()
 		{
 			try

@@ -159,14 +159,14 @@ xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Sync
                                     </Label>
                                 </StackLayout>
                             </Frame>
-                            <Frame Grid.Column="1" BackgroundColor="White" Margin="0,15,15,15" Padding="0" CornerRadius="5" BorderColor="#D7D7D7" HasShadow="False">
+                            <Frame Grid.Column="1" BackgroundColor="White" Margin="0,15,15,15" Padding="0" CornerRadius="5" HasShadow="False">
                                 <StackLayout Orientation="Horizontal" Spacing="0" Padding="3" Margin="0">
-                                    <zegogo:CustomEntry x:Name="mesEntry" Placeholder="{x:Static resource:AppResources.write_mess}" FontFamily="Circe-Regular.ttf#Circe-Regular" PlaceholderColor="#696969" Margin="0,-5,0,-5" HorizontalOptions="StartAndExpand">
+                                    <Entry x:Name="mesEntry" Placeholder="{x:Static resource:AppResources.write_mess}" FontFamily="Circe-Regular.ttf#Circe-Regular" PlaceholderColor="#696969" Margin="0,-5,0,-5">
                                         <Entry.FontSize>
                                             <OnPlatform x:TypeArguments="x:Double" iOS="12" Android="12"/>
                                         </Entry.FontSize>
-                                    </zegogo:CustomEntry>
-                                    <Frame BackgroundColor="#BE593D" HasShadow="False" Padding="0" CornerRadius="5" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand">
+                                    </Entry>
+                                    <Frame BackgroundColor="#BE593D" HasShadow="False" Padding="0" CornerRadius="5" HorizontalOptions="Fill" VerticalOptions="CenterAndExpand" >
                                         <Frame.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" NumberOfTapsRequired="1"></TapGestureRecognizer>
                                         </Frame.GestureRecognizers>
